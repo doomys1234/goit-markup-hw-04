@@ -14,6 +14,7 @@ html {
   --footer-color: #2f303a;
   --footer-contacts: rgba(255, 255, 255, 0.6);
   --main-title: #ffff;
+  --icon-color: #afb1b8;
 }
 body {
   margin: 0;
@@ -99,14 +100,20 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.item > .contacts-link::before {
-  content: "";
-  height: 12px;
-  width: 12px;
-  margin-right: 10px;
-  background-color: red;
-}
 
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  align-self: center;
+  fill: currentColor;
+}
+.icon-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
@@ -118,8 +125,6 @@ a {
 .overlay {
   padding-top: 200px;
   padding-bottom: 200px;
-
-  outline: 2px solid green;
   height: 600px;
   max-width: 1600px;
   margin-left: auto;
@@ -170,20 +175,25 @@ a {
 }
 .describe {
   display: flex;
+  justify-content: center;
 }
 
 .describe-item + .describe-item {
   margin-left: 30px;
 }
-.describe-item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  margin-bottom: 20px;
-  background-color: green;
-  background-repeat: no-repeat;
-  background-position: center;
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: var(--background-color);
+  margin-bottom: 30px;
+}
+.icon-item {
+  height: 70px;
+  width: 70px;
 }
 .list-title {
   margin-top: 0px;
@@ -234,6 +244,9 @@ a {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--main-title);
 }
+.card-item img {
+  display: block;
+}
 .card-item + .card-item {
   margin-left: 30px;
 }
@@ -265,17 +278,28 @@ a {
 .socialnet-item + .socialnet-item {
   margin-left: 10px;
 }
-
-.social {
+.social-link {
   display: inline-flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin-left: 0px;
+
+  border-radius: 50px;
+  color: var(--icon-color);
 }
-.social::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: red;
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
+.social-link:hover,
+.social-link:focus {
+  color: #ffff;
+  background-color: var(--accent-color);
+}
+
 /* CLIENTS */
 .clients {
   display: flex;
@@ -288,12 +312,58 @@ a {
 .clients-item + .clients-item {
   margin-left: 30px;
 }
+.clients-item .clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: var(--icon-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+}
+
+.logo-company {
+  fill: currentColor;
+}
+.client-first {
+  width: 41px;
+  height: 100px;
+}
+.client-second {
+  width: 40px;
+  height: 50px;
+}
+.client-third {
+  width: 43px;
+  height: 41px;
+}
+.client-fourth {
+  width: 84px;
+  height: 40px;
+}
+.client-fifth {
+  width: 65px;
+  height: 45px;
+}
+.client-sixth {
+  width: 93px;
+  height: 44px;
+}
 /* FOOTER */
 .bottom {
   background-color: var(--footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.basement {
+  display: flex;
+}
+
 .secondary {
   display: inline-block;
   margin-bottom: 20px;
@@ -327,6 +397,45 @@ a {
 .list-item:first-child {
   display: inline-block;
   margin-bottom: 9px;
+}
+.footer-box {
+  margin-left: 70px;
+}
+
+.footer-title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ffff;
+  font-size: 14px;
+  line-height: 1.14;
+}
+.box-list {
+  display: flex;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.box-item + .box-item {
+  margin-left: 10px;
+}
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffff;
+  border-radius: 50px;
+}
+.footer-icon:focus,
+.footer-icon:hover {
+  background-color: var(--accent-color);
+}
+.footer-icon .icon {
+  fill: currentColor;
 }
 
 /* PORTFOLIO */
