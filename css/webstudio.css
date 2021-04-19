@@ -48,8 +48,7 @@ a {
   display: flex;
   align-items: center;
 }
-.first-nav .nav {
-}
+
 .nav {
   display: flex;
   letter-spacing: 0.02em;
@@ -186,8 +185,8 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height: 120px;
+  width: 270px;
   background-color: var(--background-color);
   margin-bottom: 30px;
 }
@@ -419,7 +418,8 @@ a {
 .box-item + .box-item {
   margin-left: 10px;
 }
-.footer-icon {
+
+.footer-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,12 +430,10 @@ a {
   color: #ffff;
   border-radius: 50px;
 }
-.footer-icon:focus,
-.footer-icon:hover {
+.footer-link:hover,
+.footer-link:focus {
+  color: #ffff;
   background-color: var(--accent-color);
-}
-.footer-icon .icon {
-  fill: currentColor;
 }
 
 /* PORTFOLIO */
@@ -465,7 +463,8 @@ a {
   margin-left: 8px;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: var(--accent-color);
   color: #ffff;
   cursor: pointer;
@@ -491,6 +490,8 @@ a {
 }
 .portfolio-card {
   padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -508,8 +509,6 @@ a {
 .titles {
   margin-top: 0px;
   margin-bottom: 4px;
-  margin-left: 24px;
-  margin-right: 24px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -517,8 +516,6 @@ a {
 .description {
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: 24px;
-  margin-right: 24px;
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.8;
